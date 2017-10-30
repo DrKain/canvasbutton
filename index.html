@@ -109,6 +109,11 @@ button.hide();
 button.show();</code>
         </pre>
 
+        <p>
+            Note: Hiding the button will not prevent it being clicked. <br>
+            This is intentional. To prevent this hide and disable it.
+        </p>
+
         <h2>Private Button Variables</h2>
 
         <p>
@@ -153,13 +158,6 @@ button.clicked = function(){
             <img src="https://i.imgur.com/quDmU9D.gif" alt="Example SD8 Preview">
         </div>
 
-        <h2>Debug</h2>
-
-        <p>
-            Lastly, You can debug hover / click events by using `button.style.debug = true;` <br>
-            If everything is working correctly, You should see a console message every time you interact with a button.
-        </p>
-
         <h2>Mouse & Rendering</h2>
 
         <p>
@@ -187,6 +185,13 @@ setInterval(function(){
     context.clearRect(0, 0, canvas.width, canvas.height);
     button.update(__mouse, context);
 }, 0);</code></pre>
+
+        <h2>Debug</h2>
+
+        <p>
+            Lastly, You can debug hover / click events by using `button.style.debug = true;` <br>
+            If everything is working correctly, You should see a console message every time you interact with a button.
+        </p>
 
         <hr>
 
