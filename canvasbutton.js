@@ -199,10 +199,14 @@ Button.prototype.getVar = function(key){
 };
 
 Button.prototype.get = function (key) {
-    return typeof this.vars[key] !== "undefined" ? this.vars[key] : undefined;
+    return typeof this.vars[key] !== "undefined" ? this.vars[key] : (typeof this.style[key] !== "undefined" ? this.style[key] : undefined);
 };
 
-Button.prototype.set = function (key, value) {
+Button.prototype.set = function(key, value){
+    return typeof this.vars[key] !== "undefined" ? this.vars[key] = value : false;
+};
+
+Button.prototype.style = function (key, value) {
     return typeof this.style[key] !== "undefined" ? this.style[key] = value : false;
 };
 
