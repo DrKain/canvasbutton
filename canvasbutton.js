@@ -2,6 +2,7 @@ var __fh483g = {};
 var __893rhj = { off : { top : 0, left : 0 }};
 var __mouse = { x: 0, y: 0, down: false };
 
+
 var jsGetOffset = function(el) {
     var _x = 0;
     var _y = 0;
@@ -15,6 +16,7 @@ var jsGetOffset = function(el) {
 
 var jsSetMouseTrack = function(__$canvas) {
     __893rhj.off = jsGetOffset(__$canvas);
+    window.onresize = function(){ __893rhj.off = jsGetOffset(__$canvas); };
     __$canvas.onmousemove = function(e){
         var off = __893rhj.off;
         __mouse.x = e.pageX - off.left;
@@ -32,9 +34,8 @@ var jsSetMouseTrack = function(__$canvas) {
 };
 
 var setMouseTrack = function(__$canvas) {
-    if (typeof __$canvas.on === "undefined") {
-        return jsSetMouseTrack(__$canvas);
-    }
+    if (typeof __$canvas.on === "undefined") return jsSetMouseTrack(__$canvas);
+    window.onresize = function(){ __893rhj.off = __$canvas.offset(); };
     __893rhj.off = __$canvas.offset();
     __$canvas.on({
         mousemove: function(e) {
