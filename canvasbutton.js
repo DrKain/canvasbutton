@@ -69,6 +69,7 @@ function Button(ctx, options) {
     __fh483g[this.SHID] = { mo: false };
 
     this.vars = {};
+    this.killed = false;
 
     this.style = {
         mouseOver: false,
@@ -96,6 +97,11 @@ function Button(ctx, options) {
     this.apply(ctx, options);
     this.onClicked = function() {};
 }
+
+Button.prototype.remove = function(){
+    this.killed = true;
+    delete __fh483g[this.SHID];
+};
 
 Button.prototype.style = function(code) {
     // TODO: Convert css input
@@ -197,6 +203,7 @@ Button.prototype.set = function(key, value) {
 };
 
 Button.prototype.update = function(mouse, ctx) {
+    if(this.killed === true) return;
     var ov = this.style.mouseOver;
     if (
         mouse.x >= this.style.x &&
