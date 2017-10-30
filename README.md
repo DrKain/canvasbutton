@@ -1,1 +1,2 @@
-Examples found here: https://tryhardhusky.github.io/canvasbutton/
+# Full Documentation here:  
+https://tryhardhusky.github.io/canvasbutton/
