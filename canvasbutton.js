@@ -101,8 +101,7 @@ function Button(ctx, options) {
     };
 
     this.apply(ctx, options);
-    this.onClicked = function () {
-    };
+    this.onClicked = function () {};
 }
 
 Button.prototype.remove = function () {
@@ -211,7 +210,7 @@ Button.prototype.setStyle = function (key, value) {
 Button.prototype.update = function (mouse, ctx) {
     if (this.killed === true) return;
     var ov = this.style.mouseOver;
-    if (this._disabled !== true) {
+    if (this.style._disabled !== true) {
         if (
             mouse.x >= this.style.x &&
             mouse.x <= this.style.x + (this.style.width + this.style.borderSize) &&
@@ -238,7 +237,7 @@ Button.prototype.update = function (mouse, ctx) {
             mouse.down = false;
         }
     }
-    if (this._hidden !== true) this.draw(ctx);
+    if (this.style._hidden !== true) this.draw(ctx);
 };
 
 Button.prototype.draw = function (ctx) {
