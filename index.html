@@ -25,11 +25,17 @@
 
 <div id="wrapper">
 
+    <section>
+        <pre><code class="html">&lt;script type="text/javascript" src="https://tryhardhusky.github.io/canvasbutton/canvasbutton.js">&lt;/script></code></pre>
+    </section>
+
     <!----------- DEMO 1 ----------->
 
     <section id="basic-use">
-        <h2>Basic Usage</h2>
-        <pre class="tabs"><a class="active">jQuery</a><a>Javascript</a>
+
+        <div class="left">
+            <h2>Basic Usage</h2>
+            <pre class="tabs"><a class="active">jQuery</a><a>Javascript</a>
 <code class="javascript tab-jquery">var canvas = $("#canvas");
 var context = canvas.get(0).getContext('2d');
 
@@ -68,8 +74,11 @@ button.clicked = function(){
 
 // Inside draw loop
 button.update(__mouse, context);</code></pre>
-        <h2>Result</h2>
-        <canvas id="demo1"></canvas>
+        </div>
+        <div class="right">
+            <h2 style="visibility: hidden;">Result: </h2>
+            <canvas id="demo1"></canvas>
+        </div>
     </section>
 
 

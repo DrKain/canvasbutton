@@ -38,6 +38,19 @@ header p b{
     margin: 20px auto;
 }
 
+#wrapper .right{
+    width: 252px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#wrapper .left{
+    width: calc(100% - 270px);
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
 #wrapper h2{
     font-size: 20px;
     padding: 10px;
@@ -76,6 +89,7 @@ header p b{
 }
 
 #wrapper canvas{
+    margin-top: 25px;
     width: 250px;
     height: 250px;
     border: solid 1px rgba(100, 100, 100, 0.5);
