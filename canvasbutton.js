@@ -202,7 +202,7 @@ Button.prototype.set = function(key, value){
     return typeof this.vars[key] !== "undefined" ? this.vars[key] = value : false;
 };
 
-Button.prototype.style = function (key, value) {
+Button.prototype.setStyle = function (key, value) {
     return typeof this.style[key] !== "undefined" ? this.style[key] = value : false;
 };
 
