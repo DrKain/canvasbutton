@@ -90,7 +90,8 @@
         <h2>Changing the button after creation</h2>
 
         <p>
-            The `Button` constructor has several functions for changing the apperance of the button after it has been created.
+            The `Button` constructor has several functions for changing the apperance of the button after it has been
+            created.
             <br>
             The new style will be applied the time `.update()` is called.
         </p>
@@ -155,23 +156,54 @@ button.clicked = function(){
         <h2>Debug</h2>
 
         <p>
-            Lastly, You can debug hover / click events by using  `button.style.debug = true;` <br>
+            Lastly, You can debug hover / click events by using `button.style.debug = true;` <br>
             If everything is working correctly, You should see a console message every time you interact with a button.
         </p>
+
+        <h2>Mouse & Rendering</h2>
+
+        <p>
+            To render a button, Simply call its `.update()` function inside your canvas loop after clearing the screen.
+            <br>
+            You will also need to supply the mouse X Y and Down variables. But this has been made easy for you using
+            setMouseTrack()
+        </p>
+
+        <pre class="tabs"><a class="active">jQuery</a><a>Javascript</a>
+            <code class="javascript tab-jquery">setMouseTrack( $("#canvas") );</code>
+            <code class="javascript tab-javascript">setMouseTrack( document.getElementById('canvas') );</code>
+        </pre>
+
+        <p>
+            __mouse is a variable set by canvasbutton.js <br>
+            It is required for setMouseTrack to function. If you do not wish to use setMouseTrack please make sure the
+            `.update()` function is sent an object containing the X / Y and DOWN variables for the mouse.
+        </p>
+
+        <h2>Canvas Loop</h2>
+
+        <pre><code class="javascript">// Canvas Loop
+setInterval(function(){
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    button.update(__mouse, context);
+}, 0);</code></pre>
 
         <hr>
 
         <p class="footer">
             Canvasbutton.js was made by Kain @ <a href="http://ksir.pw" target="_blank">ksir.pw</a> <br>
-            It is currently protected under the <a target="_blank" href="https://github.com/TryHardHusky/canvasbutton/blob/gh-pages/LICENSE">MIT</a> License
+            It is currently protected under the <a target="_blank"
+                                                   href="https://github.com/TryHardHusky/canvasbutton/blob/gh-pages/LICENSE">MIT</a>
+            License
         </p>
 
         <p class="footer">
-            Please post any issues <a target="_blank" href="https://github.com/TryHardHusky/canvasbutton/issues">here</a>
+            Please post any issues <a target="_blank"
+                                      href="https://github.com/TryHardHusky/canvasbutton/issues">here</a>
         </p>
 
         <hr>
-        
+
     </section>
 
 </div>
