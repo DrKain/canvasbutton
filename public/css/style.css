@@ -95,10 +95,76 @@ header p b{
     border: solid 1px rgba(100, 100, 100, 0.5);
 }
 
+#wrapper section p{
+    font-style: italic;
+    padding: 10px 10px 20px;
+}
 
+#wrapper hr{
+    margin: 10px auto;
+    width: 80%;
+    border: none;
+    border-bottom: solid 1px rgba(100, 100, 100, 0.2);
+}
 
+#wrapper .nav{
+    text-align: center;
+}
 
+#wrapper .nav li{
+    display: inline-block;
+}
 
+#wrapper .nav li a{
+    margin: 0 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    border: solid 1px #333;
+    cursor: pointer;
+}
 
+#wrapper .nav li:hover a{
+    background: rgba(51, 51, 51, 0.3);
+}
 
+#wrapper section code.head{
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    padding: 10px;
+    background: rgba(100, 100, 100, 0.1);
+}
 
+#wrapper section > ul{
+    margin-left: 10px;
+    padding: 10px;
+    list-style: disc;
+}
+
+#wrapper section ul li{
+    padding: 2px;
+}
+
+#wrapper section ul li > ul{
+    list-style: circle;
+    padding-left: 20px;
+}
+
+#wrapper .tabs code{
+    display: block;
+}
+
+#wrapper .tabs code:not(:first-of-type){
+    display: none;
+}
+
+#wrapper .footer a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+#wrapper .footer{
+    text-align: right;
+}
