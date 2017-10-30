@@ -118,6 +118,8 @@ Button.prototype.show = function () {
 
 Button.prototype.disable = function () {
     this.style._disabled = true;
+    this.style.mouseOver = false;
+    delete __fh483g[this.SHID];
     if (Object.keys(this.style.disabled).length > 0) {
         // TODO: Apply Style
     }
@@ -125,6 +127,7 @@ Button.prototype.disable = function () {
 
 Button.prototype.enable = function () {
     this.style._disabled = false;
+    __fh483g[this.SHID] = {mo: false};
     if (Object.keys(this.style.disabled).length > 0) {
         // TODO: Remove Disabled Style
     }
