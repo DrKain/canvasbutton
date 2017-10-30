@@ -109,10 +109,6 @@ Button.prototype.remove = function () {
     delete __fh483g[this.SHID];
 };
 
-Button.prototype.style = function (code) {
-    // TODO: Convert css input
-};
-
 Button.prototype.hide = function () {
     this.style._hidden = true;
 };
