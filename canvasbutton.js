@@ -96,7 +96,8 @@ function Button(ctx, options) {
         borderSize: 2,
         fontSize: "12px",
         fontFamily: "Arial",
-        textColor: "#333"
+        textColor: "#333",
+        disabled : {}
     };
 
     this.apply(ctx, options);
