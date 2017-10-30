@@ -199,7 +199,8 @@ Button.prototype.get = function (key) {
 };
 
 Button.prototype.set = function(key, value){
-    return typeof this.vars[key] !== "undefined" ? this.vars[key] = value : false;
+    if(typeof this.style[key] !== "undefined") return console.error("Key is in use");
+    return this.vars[key] = value;
 };
 
 Button.prototype.setStyle = function (key, value) {
